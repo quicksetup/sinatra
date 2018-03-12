@@ -3,6 +3,8 @@
 part=$3
 test="${part}/test"
 
+echo "Generating Sinatra project..."
+
 mkdir -p "${part}/app/controllers" "${part}/app/models" "${part}/app/views"
 mkdir $test
 
@@ -51,8 +53,4 @@ echo "\tt.pattern = 'test/**/*_test.rb'" >> $rakefile
 echo "end" >> $rakefile
 echo "\ntask :default => [:test]" >> $rakefile
 
-
-
-
-
-
+echo "Done."
